@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+button {
+  outline: none;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+.page {
+  max-width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  color: #6c757d;
+  padding: 20px;
+  flex-direction: column;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 800px;
+}
+
+.header > .title {
+  text-align: center;
+}
+
+.header > .title > h3 {
+  font-size: 14px;
+}
+
+.search {
+  margin-top: 30px;
+  display: flex;
+  position: relative;
+}
+
+.searchContent {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  box-shadow: 0px 1px 10px #33333320;
+  transition: all 0.5s;
+  border-radius: 5px;
+}
+
+.searchContent:hover {
+  box-shadow: 0px 1px 10px #1ba5f750;
+}
+
+.searchContent:focus {
+  box-shadow: 0px 1px 10px #1ba5f750;
+}
+
+.searchBtn {
+  width: 25%;
+  position: absolute;
+  right: 0;
+  height: 100%;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.siteList {
+  background: #fff;
+  box-shadow: 0px 1px 10px #33333320;
+  margin: 20px 10px;
+  border-radius: 5px;
+  padding: 5px 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.site .siteLogo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #6c757d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.site {
+  background: #efefef;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin: 5px 5px;
+  position: relative;
+}
+
+.removeSite {
+  display: none;
+  position: absolute;
+  top: 5px;
+  right: 8px;
+}
+
+.site:hover {
+  background: #6c757d;
+}
+
+.site:hover .siteDesc {
+  color: #fff;
+}
+
+.site:hover .addSiteBtn {
+  color: #fff;
+}
+
+.site:hover .removeSite {
+  display: block;
+  color: rgb(255, 108, 108);
+}
+
+.site:hover .siteLogo {
+  background: #fff;
+  color: #6c757d;
+}
+
+.siteContent {
+  margin-left: 10px;
+}
+
+.siteContent > .siteTitle {
+  font-size: 14px;
+  background: #fff;
+  padding: 5px 10px;
+  border-radius: 10em;
+}
+
+.siteContent > .siteDesc {
+  margin-top: 5px;
+  font-size: 14px;
+  margin-left: 4px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer > p {
+  font-size: 12px;
+  color: #dcdcdc;
+}
+
+.addSiteBtn {
+  font-size: 2em;
+  margin: auto;
+  color: #6c757d;
+  width: 100%;
+  text-align: center;
+}
+
+.addSite {
+  width: 85%;
+  height: 130px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0px 1px 20px #33333350;
+  transition: all 0.3;
+  padding: 20px;
+  display: none;
+}
+
+.btn {
+  background: #6c757d;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.addForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.addForm > input {
+  margin-bottom: 15px;
+}
+
+.addForm > button {
+  padding: 10px;
+}
+
+#addSiteBtn {
+  height: 80px;
+}
+
+@media (min-width: 610px) {
+  .siteList {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .site {
+    min-width: 280px;
+  }
+  .header {
+    padding-top: 100px;
+  }
+  .addSite {
+    width: 400px;
+  }
+}
