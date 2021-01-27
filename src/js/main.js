@@ -3,8 +3,8 @@ const $addSiteBtn = $siteList.find("#addSiteBtn");
 const hashMap = JSON.parse(localStorage.getItem("navSite")) || [
   {
     name: "Demo",
-    logo: "N",
-    link: "//www.baidu.com/",
+    logo: "D",
+    link: "demo.com",
   },
 ];
 
